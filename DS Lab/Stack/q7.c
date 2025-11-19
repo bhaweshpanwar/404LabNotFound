@@ -56,5 +56,6 @@ int main() {
     printf("Reversed array:\n");
     displayArray(arr, n);
 
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

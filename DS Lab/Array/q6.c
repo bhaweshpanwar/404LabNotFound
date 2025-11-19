@@ -16,5 +16,6 @@ int main() {
 
     printf("Even count = %d\n", even);
     printf("Odd count = %d\n", odd);
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

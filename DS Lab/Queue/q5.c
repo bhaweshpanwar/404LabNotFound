@@ -12,6 +12,14 @@ int isFull() {
     return (rear == MAXSIZE - 1);
 }
 
+void peek() {
+    if (isEmpty()) {
+        printf("Queue is empty! No front element.\n");
+    } else {
+        printf("Front element is: %d\n", queue[front]);
+    }
+}
+
 void enqueue(int value) {
     if (isFull()) {
         printf("Queue Overflow! Cannot insert %d\n", value);
@@ -23,7 +31,6 @@ void enqueue(int value) {
     rear++;
     queue[rear] = value;
     printf("%d enqueued into queue at position %d\n", value, rear);
-    peek();
 }
 
 void dequeue() {
@@ -33,17 +40,9 @@ void dequeue() {
     }
     int value = queue[front];
     front++;
-    printf("%d dequeued from queue\n", value);
-    peek(); 
+    printf("%d dequeued from queue\n", value); 
 }
 
-void peek() {
-    if (isEmpty()) {
-        printf("Queue is empty! No front element.\n");
-    } else {
-        printf("Front element is: %d\n", queue[front]);
-    }
-}
 
 int main() {
     enqueue(10);
@@ -52,5 +51,6 @@ int main() {
     dequeue();
     enqueue(40);
     peek();
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

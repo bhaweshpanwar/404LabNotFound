@@ -18,12 +18,6 @@ int main() {
         scanf("%d", &arr2[i]);
     }
 
-    if(n1 != n2){
-        printf("Arrays must be of the same size to merge.\n");
-        return 1;
-    }
-
-
     int arr3[n1 + n2];
  
     for (i = 0; i < n1; i++) {
@@ -37,5 +31,6 @@ int main() {
     for (i = 0; i < n1 + n2; i++) {
         printf("%d ", arr3[i]);
     }
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

@@ -55,5 +55,6 @@ int main() {
     push(40);
     push(50);
     display();
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

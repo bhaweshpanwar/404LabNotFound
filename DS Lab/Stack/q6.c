@@ -47,5 +47,6 @@ int main() {
 
     insertMultiple(nums, n); 
     display(); 
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

@@ -14,5 +14,6 @@ int main() {
     for (i = n - 1; i >= 0; i--) {
         printf("%d ", arr[i]);
     }
+    printf("\nBhawesh Panwar");
     return 0;
 }

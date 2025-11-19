@@ -12,7 +12,8 @@ int main() {
     }
     strev(strBinary);
 
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }
 
 
@@ -45,5 +46,6 @@ int main() {
 
     printf("Binary of %d is %s\n", digit, strBinary);
 
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

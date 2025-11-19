@@ -90,5 +90,6 @@ int main() {
     // Step 4: Display reversed queue
     display();
 
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

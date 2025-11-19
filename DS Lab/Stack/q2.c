@@ -40,5 +40,6 @@ int main() {
     push(30);
     printf("%d popped from stack\n", pop());
 
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

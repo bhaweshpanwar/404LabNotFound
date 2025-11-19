@@ -38,7 +38,7 @@ int isPalindrome(char str[]) {
 
     for (int i = 0; i < len; i++) {
         if (str[i] != pop()) {
-            return 0; 
+        return 0; 
         }
     }
 
@@ -57,5 +57,6 @@ int main() {
         printf("The string \"%s\" is NOT a palindrome.\n", str);
     }
 
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

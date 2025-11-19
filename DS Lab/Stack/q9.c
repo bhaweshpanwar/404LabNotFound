@@ -54,5 +54,6 @@ int main() {
 
     decimalToBinary(num);
 
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

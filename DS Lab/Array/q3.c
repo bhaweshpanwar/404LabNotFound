@@ -17,5 +17,6 @@ int main() {
     }
 
     printf("Maximum element = %d\n", max);
+    printf("\nBhawesh Panwar");
     return 0;
 }

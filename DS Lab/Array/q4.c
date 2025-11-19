@@ -17,5 +17,6 @@ int main() {
     }
 
     printf("Minimum element = %d\n", min);
+    printf("\nBhawesh Panwar");
     return 0;
 }

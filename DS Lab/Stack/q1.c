@@ -53,7 +53,8 @@
 //     push(&s, 20);
 //     printf("%d popped from stack\n", pop(&s));
 
-//     return 0;
+// printf("\nBhawesh Panwar");
+// return 0;
 // }
 
 
@@ -91,5 +92,6 @@ int main() {
     push(20);           
     printf("%d popped from stack\n", pop());  
 
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

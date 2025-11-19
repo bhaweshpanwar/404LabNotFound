@@ -47,5 +47,6 @@ int main() {
     reverseQueue();
     printf("Reversed Queue: "); 
     display();
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

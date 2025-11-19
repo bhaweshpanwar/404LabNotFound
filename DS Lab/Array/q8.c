@@ -24,5 +24,6 @@ int main() {
     if (!found)
         printf("Element %d not found in array\n", search);
 
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

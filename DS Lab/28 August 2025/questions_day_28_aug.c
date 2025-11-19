@@ -57,7 +57,8 @@
     for(int i = 3 ;i>=0;i--){
         printf("%d ",arr[i]);
     }
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }*/
 
 // 6. Write a C program to count even and odd numbers in an array.
@@ -74,7 +75,8 @@
     }
     printf("Even numbers count: %d\n", even_count);
     printf("Odd numbers count: %d\n", odd_count);
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }*/
 
 // 7. Write a C program to copy all elements from one array to another.
@@ -89,7 +91,8 @@
     for(int i = 0 ; i < 4 ; i++) {
         printf("%d ", arr2[i]);
     }
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }*/
 
 // 8. Write a C program to search for an element in an array
@@ -114,7 +117,8 @@
         printf("Element %d not found in the array.\n", search_element);
     }
 
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }*/
 
 // 9. Write a C program to sort an array in ascending order.
@@ -133,7 +137,8 @@
         printf("%d ", arr[i]);
     }
 
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }*/
 
 // 10. Write a C program to merge two arrays into a third array.
@@ -153,5 +158,6 @@ int main() {
     for(int i = 0 ; i < 8 ; i++) {
         printf("%d ", arr3[i]);
     }
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

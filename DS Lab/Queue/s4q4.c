@@ -1,7 +1,10 @@
 #include <stdio.h>
 #define MAXSIZE 10
 
-struct Item { int data; int priority; };
+struct Item { 
+    int data; int priority; 
+};
+
 struct Item queue[MAXSIZE];
 int size = 0;
 
@@ -26,5 +29,6 @@ int main() {
     insert(20, 1);
     insert(30, 3);
     printf("Priority Queue: "); display();
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 }

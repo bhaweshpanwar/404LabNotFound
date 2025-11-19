@@ -41,12 +41,10 @@ int main() {
     enqueue(10);
     enqueue(20);
     enqueue(30);
-    display();
     dequeue();
-    display();
     enqueue(40);
-    display();
 
-    return 0;
+printf("\nBhawesh Panwar");
+return 0;
 
 }
