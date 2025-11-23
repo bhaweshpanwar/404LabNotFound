@@ -54,6 +54,6 @@ int main()
     printf("Reverse Display: ");
     reverseDisplay(head);
     printf("\n");
-    
+    printf("\nBhawesh Panwar\n");
     return 0;
 }

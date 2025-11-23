@@ -56,6 +56,6 @@ int main()
     
     printf("\nAfter deletion:\n");
     traverse(head);
-    
+    printf("\nBhawesh Panwar\n");
     return 0;
 }
