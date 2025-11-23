@@ -42,33 +42,42 @@ void create()
     }
 }
 
-
-void insert_sorted(int value)
+void delete_by_value(int value)
 {
-    struct node *new1, *temp, *prev;
+    struct node *temp, *prev;
     
-    new1 = (struct node *)malloc(sizeof(struct node));
-    new1->data = value;
-    new1->next = NULL;
-    
-    if (start == NULL || start->data >= value)
+    if (start == NULL)
     {
-        new1->next = start;
-        start = new1;
+        printf("List is empty.\n");
         return;
     }
     
-    temp = start;
-    prev = NULL;
-    
-    while (temp != NULL && temp->data < value)
+    if (start->data == value)
     {
+        temp = start;
+        start = start->next;
+        printf("Deleted node with value: %d\n", temp->data);
+        free(temp);
+        return;
+    }
+    
+    prev = start;
+    temp = start->next;
+    
+    while (temp != NULL)
+    {
+        if (temp->data == value)
+        {
+            prev->next = temp->next;
+            printf("Deleted node with value: %d\n", temp->data);
+            free(temp);
+            return;
+        }
         prev = temp;
         temp = temp->next;
     }
     
-    prev->next = new1;
-    new1->next = temp;
+    printf("Element not found.\n");
 }
 
 void display()
@@ -97,24 +106,24 @@ int main()
 {
     int value;
     
-    printf("========================================\n");
-    printf("Insert Node in Sorted Linked List\n");
-    printf("========================================\n\n");
+    printf("================================\n");
+    printf("Delete Node by Value\n");
+    printf("================================\n\n");
     
-    printf("Create a sorted linked list:\n");
+    printf("Create a linked list:\n");
     create();
     
     printf("\nOriginal ");
     display();
     
-    printf("\nEnter value to insert: ");
+    printf("\nEnter value to delete: ");
     scanf("%d", &value);
     
-    insert_sorted(value);
+    delete_by_value(value);
     
-    printf("\nAfter insertion:\n");
+    printf("\nAfter deletion:\n");
     display();
     printf("\nBhawesh Panwar\n");
-    
+
     return 0;
 }

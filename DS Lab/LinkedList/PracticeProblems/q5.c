@@ -42,33 +42,26 @@ void create()
     }
 }
 
-
-void insert_sorted(int value)
+void find_middle()
 {
-    struct node *new1, *temp, *prev;
+    struct node *slow, *fast;
     
-    new1 = (struct node *)malloc(sizeof(struct node));
-    new1->data = value;
-    new1->next = NULL;
-    
-    if (start == NULL || start->data >= value)
+    if (start == NULL)
     {
-        new1->next = start;
-        start = new1;
+        printf("List is empty.\n");
         return;
     }
     
-    temp = start;
-    prev = NULL;
+    slow = start;
+    fast = start;
     
-    while (temp != NULL && temp->data < value)
+    while (fast != NULL && fast->next != NULL)
     {
-        prev = temp;
-        temp = temp->next;
+        slow = slow->next;
+        fast = fast->next->next;
     }
     
-    prev->next = new1;
-    new1->next = temp;
+    printf("\nMiddle element is: %d\n", slow->data);
 }
 
 void display()
@@ -95,25 +88,22 @@ void display()
 
 int main()
 {
-    int value;
+    printf("==========================================\n");
+    printf("Find Middle Element of Linked List\n");
+    printf("==========================================\n\n");
     
-    printf("========================================\n");
-    printf("Insert Node in Sorted Linked List\n");
-    printf("========================================\n\n");
-    
-    printf("Create a sorted linked list:\n");
+    printf("Create a linked list:\n");
     create();
     
-    printf("\nOriginal ");
+    printf("\n");
     display();
     
-    printf("\nEnter value to insert: ");
-    scanf("%d", &value);
+    find_middle();
     
-    insert_sorted(value);
-    
-    printf("\nAfter insertion:\n");
-    display();
+    printf("\n--- Slow & Fast Pointer Technique ---\n");
+    printf("Slow pointer moves 1 step at a time\n");
+    printf("Fast pointer moves 2 steps at a time\n");
+    printf("When fast reaches end, slow is at middle!\n");
     printf("\nBhawesh Panwar\n");
     
     return 0;

@@ -42,33 +42,33 @@ void create()
     }
 }
 
-
-void insert_sorted(int value)
+void reverse_list()
 {
-    struct node *new1, *temp, *prev;
+    struct node *prev, *current, *next;
     
-    new1 = (struct node *)malloc(sizeof(struct node));
-    new1->data = value;
-    new1->next = NULL;
-    
-    if (start == NULL || start->data >= value)
+    if (start == NULL || start->next == NULL)
     {
-        new1->next = start;
-        start = new1;
+        printf("List is empty or has only one node.\n");
         return;
     }
     
-    temp = start;
     prev = NULL;
+    current = start;
+    next = NULL;
     
-    while (temp != NULL && temp->data < value)
+    while (current != NULL)
     {
-        prev = temp;
-        temp = temp->next;
+        next = current->next;
+        
+        current->next = prev;
+        
+        prev = current;
+        current = next;
     }
     
-    prev->next = new1;
-    new1->next = temp;
+    start = prev;
+    
+    printf("List reversed successfully!\n");
 }
 
 void display()
@@ -90,31 +90,25 @@ void display()
             printf(" -> ");
         temp = temp->next;
     }
-    printf("\n");
+    printf(" -> NULL\n");
 }
 
 int main()
 {
-    int value;
+    printf("================================\n");
+    printf("Reverse a Linked List\n");
+    printf("================================\n\n");
     
-    printf("========================================\n");
-    printf("Insert Node in Sorted Linked List\n");
-    printf("========================================\n\n");
-    
-    printf("Create a sorted linked list:\n");
+    printf("Create a linked list:\n");
     create();
     
     printf("\nOriginal ");
     display();
     
-    printf("\nEnter value to insert: ");
-    scanf("%d", &value);
+    reverse_list();
     
-    insert_sorted(value);
-    
-    printf("\nAfter insertion:\n");
+    printf("\nReversed ");
     display();
-    printf("\nBhawesh Panwar\n");
     
     return 0;
 }
